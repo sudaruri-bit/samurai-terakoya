@@ -2,7 +2,7 @@
 
 .wrapper {
   max-width: 1440px;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 0 64px;
 }
 
@@ -38,8 +38,7 @@ header a {
 .main-visual {
   position: relative;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  margin-bottom:50px;
 }
 
  .hero-img {
@@ -48,15 +47,57 @@ header a {
   display: block;
 }
 
-/* 右上に配置 */
- .schedule-img {
+/* スケジュール */
+.schedule-box {
   position: absolute;
-  top: 20px;/*topを基準に下へ移動 */
-  right: 20px;/*右端を基準に横へ移動 */
-  width: 45%;/*親用に対して45％ */
-  max-width: 600px;
-  Z-index: 2;/*要素の重なり順 */
+  top: 24px;  /* TOPからの位置を指定 */
+  right: 24px; /* 右からの位置を指定 */
+  background: #eff8ff; 
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin: 0 auto;
 }
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;/* セルを結合して線を一直線に */
+  text-align: center;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.schedule-table th:first-child, .schedule-table td:first-child {
+  text-align: left;
+  font-weight: normal;
+}
+
+.schedule-table thead th {
+  font-weight: normal;
+  border-bottom: 1px solid #7c7c7d;
+}
+
+.schedule-table tbody tr td {
+ border-bottom: 1px solid #7c7c7d;
+}
+
+
+.open {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3b3bdb;
+}
+
+.closed {
+  font-weight: bold;
+  color: #3b3bdb;
+}
+
 /* 左側に配置 */
 .main-visual-text {
   position: absolute;
@@ -84,26 +125,41 @@ header a {
 }
 
 /* =======================================================================
-    タイトルと画像の横並び
+    　診療方針/タイトルと画像の横並び
 ======================================================================= */
 .title-wrap {
-  display: flex;
-  justify-content: center; /* 全体を中央寄せ */
   margin: 40px 20px; 
 }
 
-/* ▼ 文字と画像の塊（Flexboxで横並び・下揃えにする） */
 .title-inner {
-  display: inline-flex; /* 中身の幅に合わせるかつFlexコンテナにする */
-  align-items: flex-end; /* タイトルと画像の下揃え */
-  gap: 20px; /* タイトルと画像の間の余白 */
-  padding-bottom: 5px; /* 下の文章（pタグ）との間の余白 */
-  border-bottom: 10px solid #F9BEB2; /* アンダーラインを引く */
+  display:inline-block;
+  margin: 0 auto;
 }
 
-.section-title {
+h3 {
   font-size: 45px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  margin:0 auto 20px;
+  padding:0 50px 5px 50px; 
+  border-bottom: 10px solid #F9BEB2;
+  text-align: center;
+  position: relative;
+}
+
+.section-title-plan::after {
+  content: ""; 
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/dental_1.jpg"); /* 画像のパス */
+  background-repeat: no-repeat;
+  background-size:contain; /* 画像のサイズを調整 */
+  position: absolute;
+  left: 420px; /* 画像の位置を調整 */
+
 }
 
 .dental-1-img {
@@ -111,10 +167,407 @@ header a {
   width: 80px;/* 画像の大きさ */
 }
 
+.concept {
+margin-bottom: 50px;
+}
+
 .concept p {
-  line-height: 1.5;
-  font-size: 32px;
-  text-align: center;
+  font-size: 20px;
 }
 
 
+/* ボタンのスタイル */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 250px;          /* ボタンの横幅 */
+  max-width: 100%;
+  margin: 20px auto 0;   /* 上部に余白を取り、中央寄せ */
+  padding: 14px 20px;
+  background-color: #fff;
+  color: #327BB2;        /* 文字色（青系） */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1.5px solid #327BB2; /* 枠線 */
+  border-radius: 50px;   /* 丸み */
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* 右側の丸い矢印アイコン */
+.btn-icon {
+  position: absolute;
+  right: 20px;            /* ボタンの右端からの距離 */
+  width: 28px;
+  height: 28px;
+  background-color: #327BB2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+/* 矢印（CSSで三角形を作成） */
+.btn-icon::after {
+  content: "";
+  width: 0; /* 要素自体のサイズをゼロにする */
+  height: 0; /* 要素自体のサイズをゼロにする */
+  border-top: 8px solid transparent; /* （幅）底辺の長さ・透明にする */
+  border-bottom: 8px solid transparent; /* （幅）底辺の長さ・透明にする */
+  border-left: 12px solid #fff; /* 底辺から頂点までの距離 */    
+}
+
+/* =======================================================================
+    　feature 大切にしていること
+======================================================================= */
+
+.feature-inner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+/* 2つ目のitemだけ左右を反転させる */
+.feature-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+/* 1つ目(左上)のtxt-boxは右側に余白 */
+.feature-item:nth-child(1) .feature-txt-box {
+  padding-right: 60px;
+}
+
+/* 2つ目(右下)のtxt-boxは左側に余白 */
+.feature-item:nth-child(2) .feature-txt-box {
+  padding-left: 60px;
+}
+
+.feature-txt-box {
+  flex: 1;
+}
+
+.feature-img {
+  flex: 1;
+  margin: 0;
+}
+
+.feature-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.feature-num {
+  width: 80px;
+  height: 80px;
+}
+
+.feature-title h4 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* =======================================================================
+    診療内容
+======================================================================= */
+.treatment {
+  background-color: #ABDBE3;
+  padding-bottom: 50px;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.treatment-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.treatment-item {
+  align-items: center;
+  padding-right: 100px;
+  border-right: 1px solid #3b3bdb;
+}
+
+.treatment-icon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;/* 画像を丸くする */
+}
+
+.treatment-item a {
+  text-decoration: none;
+  color:#333;
+}
+
+.treatment-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.treatment h5 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* =======================================================================
+    ブログ
+======================================================================= */
+.blog {
+  margin-top: 40px;
+}
+
+.blog .section-title {
+  text-align: left;
+}
+
+.blog-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.blog-img {
+  width: 40%;
+}
+
+.blog-list {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+}
+
+.blog-item {
+  border-bottom: 1px solid #ffbabe;
+  padding: 15px 0;
+}
+
+.blog-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ブログメタ情報（日付・ライン・カテゴリー） */
+.blog-meta {
+  display: flex; /* 横並び */
+  align-items: center;
+  gap: 15px; /* 要素間の余白 */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* カテゴリーの前に線を挿入 */
+.blog-category {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog-category::before {
+  content: "";
+  display: block;
+  width: 30px; /* 線の長さ */
+  height: 1px; /* 線の太さ */
+  background-color: #666; /* 線の色 */
+}
+
+/* タイトル（記事名）の微調整 */
+.blog-title {
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 12px; /* 画像通り少し右にインデント */
+}
+
+/* =======================================================================
+    アクセス
+======================================================================= */
+.info-contact {
+  margin-top: 20px;
+}
+
+.info-contact .section-title {
+  text-align: left;
+}
+
+.info-contact-inner {
+  display: flex;
+  justify-content: space-between;
+  gap:40px;
+  align-self: flex-start;
+}
+
+.clinic-address {
+  margin-bottom: 15px;
+}
+
+
+.map {
+  width: 100%;
+  margin-bottom: 40px;
+}
+/* ==========================================
+   医院情報 & お問い合わせ (Info & Contact)
+   ========================================== */
+.info-contact {
+  margin-bottom: 30px;
+}
+
+.clinic-logo img {
+  width: 360px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.schedule-table-mini {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 12px;
+}
+
+.schedule-table-mini th,
+.schedule-table-mini td {
+  font-weight: normal;
+  padding: 6px;
+  border-bottom: 1px solid #c6c4c4;
+}
+
+.schedule-table-mini th:first-child, .schedule-table-mini td:first-child {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* 右側コンタクトボックス */
+.contact-box {
+  width: 400px;
+  border: 1px solid #3b3bdb;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact-box h4 {
+  font-size: 20px;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.contact-box-inner {
+  background-color: #ABDBE3;
+  padding: 20px;
+}
+
+.tel-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.tel-number {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.tel-number a {
+  text-decoration: none;
+  color: #000000;
+}
+  
+ .contact-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-web,
+.btn-email {
+  display: flex;
+  flex-direction: column;/* アイコン/バッジと文字を縦並びにする */
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  text-decoration: none;
+  color: #333;
+  width:65%;/* ボタン幅を縮小（数値で幅を自由に微調整可能） */
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* 24時間受付バッジ */
+.badge{
+  font-size: 9px;
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+/* メールアイコン */
+.icon-mail {
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 4px; /* アイコン下に余白を付けて縦並び */
+  margin-right: 0;   /* 横余白のリセット */
+}
+
+.btn-text {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+
+.footer-nav-pc {
+  background-color: #ABDBE3;
+  padding: 20px;
+}
+
+.footer-nav-pc ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-pc li {
+  margin-left: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 10px;
+  }

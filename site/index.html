@@ -24,9 +24,11 @@
       <nav class="nav-pc">
         <ul>
           <li><a href="#home">ホーム</a></li>
-          <li><a href="#treatment">診療案内</a></li>
-          <li><a href="#clinic">医院紹介</a></li>
+          <li><a href="#clinic">クリニック紹介</a></li>
+          <li><a href="#treatment">診療内容</a></li>
+          <li><a href="#staff">スタッフ紹介</a></li>
           <li><a href="#access">アクセス</a></li>
+          <li><a href="#blog">ブログ</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -35,7 +37,45 @@
   <main>
     <div class="main-visual">
       <img class="hero-img" src="img/img3.jpg" alt="さわやか歯科クリニック">
-      <img class="schedule-img" src="img/Schedule.png" alt="診療時間">
+      <div class="schedule-box">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>診療時間</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th>土</th>
+              <th>日/祝</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>午前9:30～13:00</td>
+              <td><span class="open"></span></td>
+              <td><span class="open"></span></td>
+              <td><span class="closed">ー</span></td>
+              <td><span class="open"></span></td>
+              <td><span class="open"></span></td>
+              <td><span class="open"></span></td>
+              <td><span class="closed">ー</span></td>
+            </tr>
+            <tr>
+              <td>午後14:00～18:30</td>
+              <td><span class="open"></span></td>
+              <td><span class="open"></span></td>
+              <td><span class="closed">ー</span></td>
+              <td><span class="open"></span></td>
+              <td><span class="open"></span></td>
+              <td><span class="closed">ー</span></td>
+              <td><span class="closed">ー</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="main-visual-text">
         <p>地域の皆様が安心して通える<br>家族みんなのための歯科医院</p>
         <h2>さわやか歯科クリニック</h2>
@@ -43,39 +83,227 @@
     </div>
 
     <section class="concept">
-      <div class="title-wrap">
-        <div class="title-inner">
-          <h2 class="section-title">診療方針</h2>
-          <img class="dental-1-img" src="img/dental_1.jpg" alt="">
-        </div>
+      <div class="wrapper">
+        <h3 class="section-title-plan">診療方針</h3>
+
+        <p>当院は、小さなお子さまからご年配の方まで、どなたでも安心して通える歯科クリニックを目指しています。
+          単に「治療をする」のではなく、患者さんの不安を和らげ、笑顔で通えることを大切にし、最新の設備とやさしい診療で家族みんなの健康な歯を守れるようサポートしていきます。</p>
+        <a href="#" class="btn">
+          詳しくはこちら
+          <span class="btn-icon">></span>
+        </a>
       </div>
-      <P>当院は、小さなお子さまからご年配の方まで、どなたでも安心して通える歯科クリニックを目指しています。
-        単に「治療をする」のではなく、患者さんの不安を和らげ、笑顔で通えることを大切にし、最新の設備とやさしい診療で家族みんなの健康な歯を守れるようサポートしていきます。</P>
-      <a href="#" class="btn">詳しくはこちら</a>
     </section>
 
     <section class="feature">
-      <div class="feature-inner">
-        <div class="feature-item">
-          <h3>潔で快適な診療環境</h3>
-          <p>患者さんに安心して治療をうけていただけるよう、衛生管理を徹底し、最新の滅菌システムを導入。院内は明るく、清潔感のある快適な空間づくりを心がけています</p>
-          <figure class="feature__img">
-            <img src="img/feature_1.jpg" alt="">
-          </figure>
+      <div class="wrapper">
+        <div class="feature-inner">
+
+          <div class="feature-item">
+            <div class="feature-txt-box">
+              <div class="feature-title">
+                <img src="img/number-1.svg" alt="01" class="feature-num">
+                <h4>安心・安全な治療のための衛生管理</h4>
+              </div>
+              <p>患者さんに安心して治療をうけていただけるよう、衛生管理を徹底し、最新の滅菌システムを導入。院内は明るく、清潔感のある快適な空間づくりを心がけています</p>
+            </div>
+            <figure class="feature-img">
+              <img src="img/feature_1.jpg" alt="">
+            </figure>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-txt-box">
+              <div class="feature-title">
+                <img src="img/number-2.svg" alt="02" class="feature-num">
+                <h4>小さなお子さまからご年配の方<br>まで通いやすい</h4>
+              </div>
+              <p>お子さまが楽しく通えるように、キッズスペースを完備。また、ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、バリアフリー設計 になっています。</p>
+            </div>
+            <figure class="feature-img">
+              <img src="img/feature_2.jpg" alt="">
+            </figure>
+          </div>
         </div>
-        <div class="feature-item">
-          <h3>小さなお子さまからご年配の方まで通いやすい</h3>
-          <p>お子さまが楽しく通えるように、キッズスペースを完備。また、ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、バリアフリー設計 になっています。</p>
-          <figure class="feature__img">
-            <img src="img/feature_2.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="treatment" id="treatment">
+      <div class="wrapper">
+        <h4 class="section-title">診療内容</h4>
+        <div class="treatment-list">
+          <div class="treatment-item">
+            <a href="#">
+              <div class="treatment-icon">
+                <img src="img/dental-free.png" alt="一般歯科">
+              </div>
+              <h5 class="treatment-title">一般歯科</h5>
+            </a>
+          </div>
+          <div class="treatment-item">
+            <a href="#">
+              <div class="treatment-icon">
+                <img src="img/dental-free.png" alt="小児歯科">
+              </div>
+              <h5 class="treatment-title">小児歯科</h5>
+            </a>
+          </div>
+          <div class="treatment-item">
+            <a href="#">
+              <div class="treatment-icon">
+                <img src="img/dental-free.png" alt="口腔外科">
+              </div>
+              <h5 class="treatment-title">口腔外科</h5>
+            </a>
+          </div>
+          <div class="treatment-item">
+            <a href="#">
+              <div class="treatment-icon">
+                <img src="img/dental-free.png" alt="予防歯科">
+              </div>
+              <h5 class="treatment-title">予防歯科</h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <div class="wrapper">
+        <h5 class="section-title">ブログ</h5>
+        <div class="blog-inner">
+          <ul class="blog-list">
+            <li class="blog-item">
+              <a href="#">
+                <div class="blog-meta">
+                  <p class="blog-date">2026.08.16</p>
+                  <span class="blog-category">お知らせ</span>
+                </div>
+                <p class="blog-title">さわやか歯科クリニックのホームページを開設しました！</p>
+              </a>
+            </li>
+            <li class="blog-item">
+              <a href="#">
+                <div class="blog-meta">
+                  <p class="blog-date">2026.08.16</p>
+                  <span class="blog-category">お知らせ</span>
+                </div>
+                <p class="blog-title">さわやか歯科クリニックのホームページを開設しました！</p>
+              </a>
+            </li>
+            <li class="blog-item">
+              <a href="#">
+                <div class="blog-meta">
+                  <p class="blog-date">2026.08.16</p>
+                  <span class="blog-category">お知らせ</span>
+                </div>
+                <p class="blog-title">さわやか歯科クリニックのホームページを開設しました！</p>
+              </a>
+            </li>
+          </ul>
+          <figure class="blog-img">
+            <img src="img/img8.jpg" alt="">
           </figure>
         </div>
       </div>
     </section>
 
+    <!-- 医院情報・お問い合わせエリア -->
+    <section class="info-contact">
+      <div class="wrapper">
+        <h5 class="section-title">アクセス</h5>
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3081008692147!2d139.74734907634277!3d35.669414930622104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f5a18eac5%3A0x2a8366f3652c80e1!2z5p2x5Lqs6JmO44OO6ZaA44Kw44Ot44O844OQ44Or44K544Kv44Ko44Ki!5e0!3m2!1sja!2sjp!4v1789470442594!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        <div class="info-contact-inner">
+
+          <!-- 左側：医院情報＆診療時間 -->
+          <div class="clinic-info">
+            <div class="clinic-logo">
+              <img src="img/logo2.svg" alt="さわやか歯科クリニック">
+            </div>
+            <div class="clinic-address">
+              <p>〒105-0001 東京都港区虎ノ門1丁目3-1</p>
+              <p>東京メトロ 虎ノ門駅より直結・徒歩1分</p>
+              <p>駐車場はないので、近隣のコインパーキングをご利用ください</p>
+            </div>
+            <table class="schedule-table-mini">
+              <thead>
+                <tr>
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日/祝</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>午前9:30～13:00</td>
+                  <td><span class="open"></span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="closed">ー</span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="closed">ー</span></td>
+                </tr>
+                <tr>
+                  <td>午後14:00～18:30</td>
+                  <td><span class="open"></span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="closed">ー</span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="open"></span></td>
+                  <td><span class="closed">ー</span></td>
+                  <td><span class="closed">ー</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 右側：コンタクトボックス -->
+          <div class="contact-box">
+            <h4>お気軽にお問い合わせください</h4>
+            <div class="contact-box-inner">
+              <p class="tel-label">お電話でのご予約はこちら</p>
+              <p class="tel-number"><a href="tel:00-0000-0000">TEL 00-0000-0000</a></p>
+              <div class="contact-btns">
+                <a href="#" class="btn-web">
+                  <span class="badge">24時間受付</span>
+                  <span class="btn-text">WEB予約</span>
+                </a>
+                <a href="#contact" class="btn-email">
+                  <span class="icon-mail">✉</span>
+                  <span class="btn-text">お問い合わせ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>&copy;2024 さわやか歯科クリニック</p>
+    <nav class="footer-nav-pc">
+      <ul>
+        <li><a href="#home">ホーム</a></li>
+        <li><a href="#clinic">クリニック紹介</a></li>
+        <li><a href="#treatment">診療内容</a></li>
+        <li><a href="#staff">スタッフ紹介</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#blog">ブログ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+      <p class="copyright">&copy;2024 さわやか歯科クリニック</p>
+    </nav>
   </footer>
 </body>
 
